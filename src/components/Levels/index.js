@@ -14,6 +14,7 @@ const LevelsList = ({ data , onSelected }) => {
     data={data}
     keyExtractor={(item)=>item.id}
     renderItem={renderItem}
+    numColumns={2}
     />
   )
 }
