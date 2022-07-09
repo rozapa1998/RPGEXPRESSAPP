@@ -1,11 +1,9 @@
 export const stylesTabNavigation = {
-    headerStyle: {
-      backgroundColor: '#000000',
-    },
-    headerTintColor: '#fff',
-    headerTitleStyle: {
-      fontWeight: 'bold',
-      fontFamily: "Bokor",
-      fontSize: 25,
-    },
+    headerShown: false,
+    tabBarActiveBackgroundColor:"black",
+    tabBarInactiveBackgroundColor:"grey",
+    tabBarLabelStyle: {
+        fontFamily:"Bokor",
+        color:"white",
+        fontSize: 12},
 }

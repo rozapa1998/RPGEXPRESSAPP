@@ -15,33 +15,23 @@ const TabNavigator = () => {
         <BottomTab.Navigator initialRouteName="Home" screenOptions={stylesTabNavigation} >
             <BottomTab.Screen name="Home" component={ScreenNavigation} 
             options={{
-                headerShown: false,
-                tabBarLabelStyle: {fontFamily:"Bokor",
-                color:"black",
-                fontSize: 13},
                 tabBarIcon: ({focused }) =>(
-                    <Ionicons name={focused ? "home" : "home-outline"} size={20} color={focused? "black":"grey"}/>
-                )
+                    <Ionicons name={focused ? "home" : "home-outline"} size={20} color={focused? "white":"black"}/>
+                ),
             }}/>
             <BottomTab.Screen name="Shop" component={ShopScreen}
             options={{
                 tabBarLabel: "Shop",
-                tabBarLabelStyle: {fontFamily:"Bokor",
-                color:"black",
-                fontSize: 13},
                 tabBarIcon: ({focused }) =>(
-                    <Ionicons name={focused ? "beer" : "beer-outline"} size={20} color={focused? "black":"grey"}/>
-                )
+                    <Ionicons name={focused ? "beer" : "beer-outline"} size={20} color={focused? "white":"black"}/>
+                ),
             }}/>
             <BottomTab.Screen name="StatsTab" component={Stats}
             options={{
                 tabBarLabel: "Stats",
-                tabBarLabelStyle: {fontFamily:"Bokor",
-                color:"black",
-                fontSize: 13},
                 tabBarIcon: ({focused }) =>(
-                    <Ionicons name={focused ? "stats-chart" : "stats-chart-outline"} size={20} color={focused? "black":"grey"}/>
-                )
+                    <Ionicons name={focused ? "stats-chart" : "stats-chart-outline"} size={20} color={focused? "white":"black"}/>
+                ),
             }}/>
         </BottomTab.Navigator>
     ) 
