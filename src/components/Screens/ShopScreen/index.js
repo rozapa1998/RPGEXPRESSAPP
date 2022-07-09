@@ -1,9 +1,8 @@
 import React from 'react'
 import { View , Text , TouchableOpacity , ImageBackground } from 'react-native'
 import { style } from './styles'
-import { GlobalStyles } from '../../../constants/styles/styles'
 
-const ShopScreen = ({ navigation }) => {
+const ShopScreen = () => {
   return (
     <View>
       <ImageBackground source={require("../../../../assets/img/Profile-Screen.gif")} resizeMode="cover" style={{width: '100%', height: '100%'}}>
@@ -12,12 +11,7 @@ const ShopScreen = ({ navigation }) => {
        </View>
        <View style={style.buttonContainer}>
         <View style={style.shadowContainer}>
-       <TouchableOpacity
-        style={GlobalStyles.button}
-        title='Ir a Profile'
-        onPress={()=>navigation.navigate("Levels")}>
-          <Text style={style.fontTextButton}>Levels</Text>
-        </TouchableOpacity>
+       
         </View>
         </View>
         
