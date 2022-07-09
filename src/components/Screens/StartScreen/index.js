@@ -16,7 +16,7 @@ const StartScreen = ({ navigation }) => {
         <TouchableOpacity
         style={GlobalStyles.button}
         title='Ir a Profile'
-        onPress={()=>navigation.navigate("Profile")}>
+        onPress={()=>navigation.navigate("Shop")}>
           <Text style={style.fontTextButton}>Start</Text>
         </TouchableOpacity>
         

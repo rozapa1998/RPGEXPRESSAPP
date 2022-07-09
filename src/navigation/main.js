@@ -11,7 +11,7 @@ const img =  <Image style={{ width: 100, height: 100, marginBottom: 15 }} source
 
 //Screens
 import StartScreen from '../components/Screens/StartScreen';
-import ProfileScreen from '../components/Screens/ProfileScreen';
+import ShopScreen from '../components/Screens/ShopScreen';
 import FightScreen from '../components/Screens/FightScreen';
 import LevelsScreen from '../components/Screens/LevelsScreen';
 
@@ -32,7 +32,7 @@ const Navigation = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home' screenOptions={options}>
         <Stack.Screen name="Home" component={StartScreen} options={{ headerTitle: () => <LogoTitle/>}}/>
-        <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="Shop" component={ShopScreen} />
         <Stack.Screen name="Levels" component={LevelsScreen} />
         <Stack.Screen name="Fight" component={FightScreen} 
         options={({route})=>({

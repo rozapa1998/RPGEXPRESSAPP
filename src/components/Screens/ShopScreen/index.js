@@ -3,12 +3,12 @@ import { View , Text , TouchableOpacity , ImageBackground } from 'react-native'
 import { style } from './styles'
 import { GlobalStyles } from '../../../constants/styles/styles'
 
-const ProfileScreen = ({ navigation }) => {
+const ShopScreen = ({ navigation }) => {
   return (
     <View>
       <ImageBackground source={require("../../../../assets/img/Profile-Screen.gif")} resizeMode="cover" style={{width: '100%', height: '100%'}}>
        <View style={style.container}>
-       <Text style={style.fontText}>Character</Text>
+       <Text style={style.fontText}>Shop</Text>
        </View>
        <View style={style.buttonContainer}>
         <View style={style.shadowContainer}>
@@ -26,4 +26,4 @@ const ProfileScreen = ({ navigation }) => {
   )
 }
 
-export default ProfileScreen
+export default ShopScreen
