@@ -8,6 +8,7 @@ const LevelItem = ({ item , onSelected }) => {
         <TouchableOpacity 
         style={{...styles.Level, backgroundColor: item.color }} 
         onPress={()=>onSelected(item)}>
+          
             <View style={styles.containerStage}>
                 <Text style={styles.stage}>NV: {item.id}</Text>
             </View>
