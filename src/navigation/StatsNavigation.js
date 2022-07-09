@@ -4,10 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Image } from 'react-native';
 
 //Style
-import { options } from './styles';
-
-//Img
-const img =  <Image style={{ width: 100, height: 100, marginBottom: 15 }} source={require("../../assets/img/Logo.png")}/>
+import { stylesNavigation } from './stylesNavigation';
 
 //Screens
 import Stats from '../components/Screens/Stats/main';
@@ -27,7 +24,7 @@ function LogoTitle() {
 const StatsNavigation = () => {
     return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Stats' screenOptions={options}>
+      <Stack.Navigator initialRouteName='Stats' screenOptions={stylesNavigation}>
         <Stack.Screen name="Stats" component={Stats} options={{ headerTitle: () => <LogoTitle/>}}/>
       </Stack.Navigator>
     </NavigationContainer>
