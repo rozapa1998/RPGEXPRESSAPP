@@ -6,4 +6,5 @@ export const stylesTabNavigation = {
         fontFamily:"Bokor",
         color:"white",
         fontSize: 12},
+        tabBarStyle: { backgroundColor: "#000000" }
 }

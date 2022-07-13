@@ -2,7 +2,7 @@ export const ShopData = [
     {
         id: 1,
         name: "Espada",
-        tipo: "Normal",
+        type: "Normal",
         price: 100,
         ATQ: 5,
         description: "+5 ATQ"
@@ -10,17 +10,17 @@ export const ShopData = [
     {
         id: 2,
         name: "Espada",
-        tipo: "Normal",
-        price: 100,
-        ATQ: 5,
-        description: "+5 ATQ"
+        type: "Rara",
+        price: 200,
+        ATQ: 10,
+        description: "+10 ATQ"
     },
     {
         id: 3,
         name: "Espada",
-        tipo: "Normal",
-        price: 100,
-        ATQ: 5,
-        description: "+5 ATQ"
+        type: "Epica",
+        price: 500,
+        ATQ: 20,
+        description: "+20 ATQ"
     }
 ]

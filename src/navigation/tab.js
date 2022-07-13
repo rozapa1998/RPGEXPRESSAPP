@@ -12,7 +12,7 @@ const BottomTab = createBottomTabNavigator();
 
 const TabNavigator = () => {
     return (
-        <BottomTab.Navigator initialRouteName="Home" screenOptions={stylesTabNavigation} >
+        <BottomTab.Navigator initialRouteName="Home" screenOptions={stylesTabNavigation}>
             <BottomTab.Screen name="Home" component={ScreenNavigation} 
             options={{
                 tabBarIcon: ({focused }) =>(
