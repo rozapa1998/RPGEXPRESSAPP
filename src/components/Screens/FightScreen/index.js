@@ -1,15 +1,13 @@
 import React from 'react'
 import { View , Text , ImageBackground } from 'react-native'
 import { style } from './styles'
-import { Enemies } from "../../../constants/data/enemies"
 import Fight from '../../Fight'
+import { useSelector } from 'react-redux'
 
-const FightScreen = ({ route }) => {
+const FightScreen = () => {
   
-  const filtredEnemies = () => {
-    const filtrado = Enemies.filter(enemy => enemy.levelId === route.params.levelId)
-    return filtrado
-  }
+  
+  const filtredenemies = useSelector (state=> state.enemies.filtredEnemies)
 
   return (
     <View>
@@ -18,7 +16,7 @@ const FightScreen = ({ route }) => {
           <Text style={style.fontText}>Fight</Text>
           <View style={style.container}>
              <Fight
-             data={filtredEnemies()}
+             data={filtredenemies}
              />
             </View>
         </View>

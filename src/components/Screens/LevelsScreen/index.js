@@ -1,14 +1,21 @@
 import React from 'react'
 import { View , Text , ImageBackground } from 'react-native'
 import { style } from './styles'
-import {levelsData} from "../../../constants/data/levelsData"
+import { useSelector, useDispatch } from 'react-redux'
+import { SelectedLevel } from '../../../store/actions/level.action'
 import LevelsList from '../../Levels'
 
-const LevelsScreen = ({ navigation , route  }) => {
+const LevelsScreen = ({ navigation }) => {
   
+  //Redux Dispatch y states
+  const dispatch = useDispatch()
+  const levels = useSelector(state => state.levels.levelsData)
+  const levelsEnemies = useSelector(state=> state.enemies.filtredEnemies)
+
+  //Handler del nivel Seleccionado
   const onHandleSelectedLevel = (item) =>{
+    dispatch(SelectedLevel(item.id))
     navigation.navigate("Fight",{
-      levelId: item.id,
       title: item.title,
     });
   }
@@ -20,7 +27,7 @@ const LevelsScreen = ({ navigation , route  }) => {
           <Text style={style.fontText}>Levels</Text>
           <View style={style.container}>
               <LevelsList
-              data={levelsData}
+              data={levels}
               onSelected={onHandleSelectedLevel}
               />
             </View>

@@ -13,15 +13,15 @@ const Fight = ({ data }) => {
   //Max Segun Array
   let Max = data.length
 
-  let Randomizado = Random(Max)
+  let Randomizado = Random (Max)
 
   return (
     <View style={styles.containerFight}>
-        <Text style={styles.textFont}>{data[Randomizado].name}</Text>
-        <Text style={styles.textFont}>{data[Randomizado].HP}</Text>
-        <Text style={styles.textFont}>{data[Randomizado].ATQ}</Text>
+        <Text style={styles.textFont}>{data.name}</Text>
+        <Text style={styles.textFont}>{data.HP}</Text>
+        <Text style={styles.textFont}>{data.ATQ}</Text>
             <View>
-                {data[Randomizado].img}
+                {data.img}
             </View>
     </View>
   )
