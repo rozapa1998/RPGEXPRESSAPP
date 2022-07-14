@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { View , Text , ImageBackground } from 'react-native'
 import { style } from './styles'
 import Fight from '../../Fight'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+//Actions
+import { filtredEnemy } from '../../../store/actions/enemy.action'
 
 const FightScreen = () => {
   
-  
-  const filtredenemies = useSelector (state=> state.enemies.filtredEnemies)
+  //Dispatch Redux
+  const dispatch = useDispatch();
+  //Fltrado de enemigos
+  const selectedLevel = useSelector( state => state.levels.selected )
+  const filtredenemies = useSelector ( state => state.enemies.filtredEnemies )
+  const enemiesState = useSelector(state => state.enemies.filtredEnemies)
+
+  useEffect(() => {
+    dispatch(filtredEnemy(selectedLevel.id))
+  }, [])
   
 
   return (

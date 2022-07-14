@@ -14,6 +14,7 @@ const LevelsScreen = ({ navigation }) => {
   const levels = useSelector(state => state.levels.levelsData)
   const levelsEnemies = useSelector(state=> state.enemies.filtredEnemies)
 
+  
   //Handler del nivel Seleccionado
   const onHandleSelectedLevel = (item) =>{
     dispatch(SelectedLevel(item.id))
@@ -21,8 +22,6 @@ const LevelsScreen = ({ navigation }) => {
       title: item.title,
     });
   }
-
-  
 
   return (
     <View>

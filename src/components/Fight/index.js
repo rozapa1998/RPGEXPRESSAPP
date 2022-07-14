@@ -17,11 +17,11 @@ const Fight = ({ data }) => {
 
   return (
     <View style={styles.containerFight}>
-        <Text style={styles.textFont}>{data.name}</Text>
-        <Text style={styles.textFont}>{data.HP}</Text>
-        <Text style={styles.textFont}>{data.ATQ}</Text>
+        <Text style={styles.textFont}>{data[Randomizado].name}</Text>
+        <Text style={styles.textFont}>{data[Randomizado].HP}</Text>
+        <Text style={styles.textFont}>{data[Randomizado].ATQ}</Text>
             <View>
-                {data.img}
+                {data[Randomizado].img}
             </View>
     </View>
   )
