@@ -8,6 +8,7 @@ const FightScreen = () => {
   
   
   const filtredenemies = useSelector (state=> state.enemies.filtredEnemies)
+  
 
   return (
     <View>

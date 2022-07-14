@@ -1,8 +1,10 @@
 import React from 'react'
 import { View , Text , ImageBackground } from 'react-native'
 import { style } from './styles'
+//Redux
 import { useSelector, useDispatch } from 'react-redux'
 import { SelectedLevel } from '../../../store/actions/level.action'
+//Level FlatList
 import LevelsList from '../../Levels'
 
 const LevelsScreen = ({ navigation }) => {
@@ -19,6 +21,8 @@ const LevelsScreen = ({ navigation }) => {
       title: item.title,
     });
   }
+
+  
 
   return (
     <View>

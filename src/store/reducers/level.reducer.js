@@ -11,11 +11,11 @@ const initialState = {
 const LevelReducer = (state = initialState, action) => {
     switch (action.type) {
         case SELECTED_LEVEL:
-            const indexLevel = state.levelsData.findIndex( levels => levels.id === levelId )
+            const indexLevel = state.levelsData.findIndex( level => level.id === action.levelId )
             if(indexLevel === -1) return state
         return {
             ...state,
-            selected: state.levels[indexLevel]
+            selected: state.levelsData[indexLevel]
         }
         default:
             return state
