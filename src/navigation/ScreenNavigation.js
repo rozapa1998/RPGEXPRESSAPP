@@ -26,8 +26,8 @@ function LogoTitle() {
 
 const ScreenNavigation = () => {
     return (
-      <Stack.Navigator initialRouteName='start' screenOptions={stylesNavigation}>
-        <Stack.Screen name="start" component={StartScreen} options={{ headerTitle: () => <LogoTitle/>}}/>
+      <Stack.Navigator initialRouteName='Inicio' screenOptions={stylesNavigation}>
+        <Stack.Screen name="Inicio" component={StartScreen} options={{ headerTitle: () => <LogoTitle/>}}/>
         <Stack.Screen name="Register" component={RegisterScreen} />
         <Stack.Screen name="Shop" component={ShopScreen} />
         <Stack.Screen name="Levels" component={LevelsScreen} />
