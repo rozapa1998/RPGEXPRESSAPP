@@ -1,0 +1,1 @@
+export const URL_API = "https://rpg-expressapp-default-rtdb.firebaseio.com/"
