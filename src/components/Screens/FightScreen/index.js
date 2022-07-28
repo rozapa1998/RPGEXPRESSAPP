@@ -8,17 +8,22 @@ import { filtredEnemy } from '../../../store/actions/enemy.action'
 
 const FightScreen = () => {
   
+  
+
   //Dispatch Redux
   const dispatch = useDispatch();
   //Fltrado de enemigos
   const selectedLevel = useSelector( state => state.levels.selected )
-  const filtredenemies = useSelector ( state => state.enemies.filtredEnemies )
   const enemiesState = useSelector(state => state.enemies.filtredEnemies)
-
+  
   useEffect(() => {
     dispatch(filtredEnemy(selectedLevel.id))
+    return () => {
+      filtredenemies
+    }
   }, [])
   
+  const filtredenemies = useSelector ( state => state.enemies.filtredEnemies )
 
   return (
     <View>
