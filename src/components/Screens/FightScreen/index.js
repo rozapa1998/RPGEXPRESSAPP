@@ -7,14 +7,11 @@ import { useSelector, useDispatch } from 'react-redux'
 import { filtredEnemy } from '../../../store/actions/enemy.action'
 
 const FightScreen = () => {
-  
-  
 
   //Dispatch Redux
   const dispatch = useDispatch();
   //Fltrado de enemigos
   const selectedLevel = useSelector( state => state.levels.selected )
-  const enemiesState = useSelector(state => state.enemies.filtredEnemies)
   
   useEffect(() => {
     dispatch(filtredEnemy(selectedLevel.id))
