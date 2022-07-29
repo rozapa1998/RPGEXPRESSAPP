@@ -5,8 +5,4 @@ export const GlobalStyles = StyleSheet.create ({
         borderRadius: 10,
         backgroundColor: "#cc0000",
     },
-    buttonLogin: {
-        borderRadius: 10,
-        backgroundColor: "#00BFFF",
-    }
 })
