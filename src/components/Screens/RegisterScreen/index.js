@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { View , Text , ImageBackground , TouchableOpacity , KeyboardAvoidingView , TextInput} from 'react-native'
 import { style } from './styles'
 import { GlobalStyles } from '../../../constants/styles/styles'
-import { singup } from '../../../store/actions/auth.action'
+import { singin, singup } from '../../../store/actions/auth.action'
 
 const RegisterScreen = ({ navigation }) => {
   //Dispatch Redux
@@ -12,13 +12,14 @@ const RegisterScreen = ({ navigation }) => {
   //UseState Inputs
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [isLogin, setIsLogin] = useState(true)
   
   //Variables
-  const title = "Registro"
-  const message = "¿Ya tienes cuenta?"
-  const messageAction = "Ingresar"
+  const title = isLogin ? "Ingresa" :"Registro"
+  const message = isLogin ? "¿No tienes una cuenta?" :"¿Ya tienes cuenta?"
+  const messageAction = isLogin ? "Registrate" :"Ingresar"
   const messageTarger = "Login"
-  const buttonText = "Sing Up"
+  const buttonText = isLogin ? "Sing In" :"Sing Up"
 
   //OnchangeText
   const onChangeText = ( text , type ) => {
@@ -30,8 +31,8 @@ const RegisterScreen = ({ navigation }) => {
   }
 
   //HandleSingUp
-  const HandleSingUp = () => {
-    dispatch(singup( email, password ))
+  const HandleSubmit = () => {
+    dispatch(isLogin ? singin( email , password) : singup( email , password ))
   }
   
   return (
@@ -72,7 +73,7 @@ const RegisterScreen = ({ navigation }) => {
           <TouchableOpacity
                   style={style.button}
                   title='Sing Up'
-                  onPress={()=>HandleSingUp()}>
+                  onPress={()=>HandleSubmit()}>
             <Text style={style.fontTextButton}>{buttonText}</Text>
           </TouchableOpacity>
         </View>
@@ -81,7 +82,7 @@ const RegisterScreen = ({ navigation }) => {
             <TouchableOpacity
                   style={GlobalStyles.buttonLogin}
                   title={messageTarger}
-                  onPress={()=>console.warn(messageTarger)}>
+                  onPress={()=>setIsLogin(!isLogin)}>
               <Text style={style.fontTextButtonLogin}>{messageAction}</Text>
             </TouchableOpacity>
         </View>

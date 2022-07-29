@@ -1,4 +1,4 @@
-import { URL_AUTH_SINGUP } from "../../constants/data/firebase";
+import { URL_AUTH_SINGIN, URL_AUTH_SINGUP } from "../../constants/data/firebase";
 import { authType } from "../../types/auth.types";
 
 
@@ -23,6 +23,34 @@ export const singup = ( email , password ) => {
 
             dispatch({
                 type: SING_UP,
+                token: result.idToken,
+                userId: result.localId,
+            })
+        } catch (error) {
+            console.warn(error);
+        }
+    };
+};
+
+export const singin = ( email, password )=> {
+    return async (dispatch) => {
+        try {
+            const response = await fetch(URL_AUTH_SINGIN, {
+                method: "POST" ,
+                headers: {
+                    "Content-Type" : "application/json"
+                },
+                body: JSON.stringify({
+                    email,
+                    password,
+                    returnSecureToken: true,
+                })
+            })
+
+            const result = await response.json();
+
+            dispatch({
+                type: SING_IN,
                 token: result.idToken,
                 userId: result.localId,
             })
