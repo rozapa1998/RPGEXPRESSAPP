@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { View , Text , ImageBackground , TouchableOpacity , KeyboardAvoidingView , TextInput} from 'react-native'
+import { View , Text , ImageBackground , TouchableOpacity , KeyboardAvoidingView , TextInput , Image} from 'react-native'
 import { style } from './styles'
 import { GlobalStyles } from '../../../constants/styles/styles'
 import { singin, singup } from '../../../store/actions/auth.action'
@@ -40,7 +40,7 @@ const RegisterScreen = ({ navigation }) => {
       <ImageBackground source={require("../../../../assets/img/Start-Screen.gif")} resizeMode="cover" style={{width: '100%', height: '100%'}}>
         <KeyboardAvoidingView style={style.containerKeyboard} behavior="height">
           <View style={style.startContainer}>
-            <Text style={style.fontTextTitleStart}>RPG-EXPRESS</Text>
+            <Image style={style.image} source={require("../../../../assets/img/Logo.png")}></Image>
           </View>
             <View style={style.containerForm}>
             <Text style={style.fontTextTitle}>- {title} -</Text>

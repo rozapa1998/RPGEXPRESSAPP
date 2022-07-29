@@ -49,7 +49,7 @@ export const style = StyleSheet.create ({
         padding: 20,
     },
     containerForm: {
-        marginTop: 80,
+        marginTop: 50,
     },
     input:{
         fontFamily:"Bokor",
@@ -64,5 +64,10 @@ export const style = StyleSheet.create ({
         marginEnd: 25,
         borderRadius:10,
         backgroundColor:"red",
+    },
+    image:{
+        height: 100,
+        width: 100,
+        marginTop: 25,
     }
 })
