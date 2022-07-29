@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 //Screens
 import TabNavigator from './tab';
+import AuthNavigator from './Auth';
 
 const Navigation = () => {
+  const [user, setUser] = useState(null);
     return (
     <NavigationContainer>
-      <TabNavigator/>
+      {user ? <TabNavigator/> : <AuthNavigator/>}
     </NavigationContainer>
     )
 }
 
-export default Navigation
+export default Navigation;
