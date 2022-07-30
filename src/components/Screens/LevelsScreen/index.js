@@ -5,6 +5,7 @@ import { style } from './styles'
 import { useSelector, useDispatch } from 'react-redux'
 import { SelectedLevel } from '../../../store/actions/level.action'
 import { filtredEnemy } from '../../../store/actions/enemy.action'
+import { createStats } from '../../../store/actions/stats.action'
 //Level FlatList
 import LevelsList from '../../Levels'
 
@@ -13,7 +14,6 @@ const LevelsScreen = ({ navigation }) => {
   //Redux Dispatch y states
   const dispatch = useDispatch()
   const levels = useSelector(state => state.levels.levelsData)
-
   
   //Handler del nivel Seleccionado
   const onHandleSelectedLevel = (item) =>{

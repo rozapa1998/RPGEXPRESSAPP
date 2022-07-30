@@ -1,16 +1,21 @@
-import React from 'react'
-import { View , Text , TouchableOpacity , ImageBackground } from 'react-native'
+import React, {useState} from 'react'
+import { View , Text , ImageBackground } from 'react-native'
 import ShopList from '../../Shop'
 import { style } from './styles'
 import { ShopData } from "../../../constants/data/shopData"
+import { useSelector } from 'react-redux'
 
 const ShopScreen = ({navigation}) => {
-  
-  const onHandleSelectedLevel = (item) =>{
-    navigation.navigate("Shop",{
-      levelId: item.id,
-      title: item.title,
-    });
+  const [alert, setAlert] = useState (<Text></Text>)
+  const userStats = useSelector ( state => state.stats )
+
+  const onHandleSelectedItem = (item) =>{
+    if(item.price > userStats.ORO){
+      setTimeout(() => {
+        setAlert(<Text></Text>)
+      }, 2000);
+      setAlert(<Text style={style.alert}>No tienes suficiente oro!</Text>)
+    }
   }
   
   return (
@@ -21,7 +26,9 @@ const ShopScreen = ({navigation}) => {
        </View>
        <ShopList
        data={ShopData}
+       onSelected={onHandleSelectedItem}
        />
+       {alert}
         </ImageBackground> 
     </View>
   )

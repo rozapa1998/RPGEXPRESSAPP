@@ -3,6 +3,7 @@ import { View , Text , TouchableOpacity } from 'react-native'
 import { styles } from './styles'
 
 const ProductItem = ({ item , onSelected }) => {
+  
   return (
     <View style={styles.cardContainer}>
         <TouchableOpacity style={styles.card} 

@@ -11,4 +11,10 @@ export const style = StyleSheet.create ({
         marginVertical: 25,
         color:"white"
     },
+    alert:{
+        color:"red",
+        fontSize: 30,
+        textAlign: "center",
+        fontFamily:"Bokor"
+    }
 })

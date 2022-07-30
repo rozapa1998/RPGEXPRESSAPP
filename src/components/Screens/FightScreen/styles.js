@@ -11,5 +11,17 @@ export const style = StyleSheet.create ({
         fontSize: 50,
         marginVertical: 25,
         color: "white"
+    },
+    buttonAtack:{
+        marginBottom: 15,
+        marginTop: 650,
+        paddingHorizontal: 25,
+        
+        position:"absolute"
+    },
+    button:{
+        padding: 20,
+        backgroundColor: "red",
+        borderRadius: 15,
     }
 })

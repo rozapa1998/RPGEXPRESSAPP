@@ -27,7 +27,7 @@ export const insert = ( title , image, stats ) => {
                 [title,image,JSON.stringify(stats)],
                 (_, result)=>{
                     console.warn(result)
-                    resolve()
+                    resolve(result)
                 },
                 (_,err) => {
                     console.warn(err);

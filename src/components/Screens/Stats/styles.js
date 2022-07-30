@@ -17,10 +17,20 @@ export const styles = StyleSheet.create ({
         color:"white"
     },
     buttonCreateStats:{
-        marginTop: 40,
+        marginTop: 25,
         backgroundColor:"red",
         padding: 15,
         paddingHorizontal: 25,
         borderRadius: 20,
+    },
+    TextInput:{
+        marginTop: 10,
+        marginBottom: 10,
+        backgroundColor:"white",
+        borderRadius: 10,
+        fontFamily:"Bokor",
+        fontSize: 15,
+        padding: 8,
+        width: 160,
     }
 })

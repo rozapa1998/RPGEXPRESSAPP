@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import { View , Text , ImageBackground } from 'react-native'
+import { View , Text , ImageBackground, TouchableOpacity } from 'react-native'
 import { style } from './styles'
 import Fight from '../../Fight'
-import { useSelector, useDispatch } from 'react-redux'
-//Actions
-import { filtredEnemy } from '../../../store/actions/enemy.action'
+import { useSelector } from 'react-redux'
 
 const FightScreen = () => {
+  
   //Fltrado de enemigos
   const filtredenemies = useSelector ( state => state.enemies.filtredEnemies )
-
 
   return (
     <View>
@@ -21,6 +19,11 @@ const FightScreen = () => {
              <Fight
              data={filtredenemies}
              />
+            </View>
+            <View style={style.buttonAtack}>
+              <TouchableOpacity style={style.button}>
+                <Text>ATQ</Text>
+              </TouchableOpacity>
             </View>
         </View>
         </ImageBackground> 
